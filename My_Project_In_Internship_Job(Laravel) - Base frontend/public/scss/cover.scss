@@ -1,0 +1,63 @@
+@mixin position($flex,$flex_d,$flex_cont,$flex_align){
+    display: $flex;
+    flex-direction: $flex_d;
+    justify-content: $flex_cont;
+    align-items: $flex_align;
+}
+@mixin size($height,$width){
+    width: $width;
+    height: $height;
+}
+.cover{
+    @include position(flex, column, none, flex-start);
+    @include size(328px,1280px);
+    padding: 140px 320px;
+    gap: 32px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 1;
+}
+.container__h1{
+    @include size(160px,1280px);
+    font-family: 'Geologica';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 80px;
+    color: #222222;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.container_phone_icon{
+    @include position(flex, row, center, center);
+    @include size(56px,225px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background: #0044FF;
+    border-radius: 32px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.25s;
+}
+.сontacts__group1__phone-number:hover{
+    color: #0044FF;
+}
+.contacts__group2__phone-number:hover{
+    color: #0044FF;
+}
+.contacts__group__social-media__telegram:hover{
+    color: #0044FF;
+}
+.contacts__group__social-media__whatsapp:hover{
+    color: #0044FF;
+}
