@@ -1,0 +1,156 @@
+@mixin position($flex,$flex_d,$flex_cont,$flex_align){
+    display: $flex;
+    flex-direction: $flex_d;
+    justify-content: $flex_cont;
+    align-items: $flex_align;
+}
+@mixin size($height,$width){
+    width: $width;
+    height: $height;
+}
+@mixin copy($margin){
+    // margin: 0 $margin;
+    font-family: 'Geologica';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12rem;
+    line-height: 16rem;
+    color: #FFFFFF;
+
+}
+@mixin font($weight,$size,$height){
+    font-family: 'Geologica';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+.footer{
+    @include position(flex, column, none, flex-start);
+    @include size(672rem,none);
+    display: flex;
+}
+ .footer__contacts{
+    @include position(flex, none, center, flex-end);
+    @include size(592rem,none);
+    font-size: 16rem;
+    box-sizing: border-box;
+    padding: 240rem 320rem;
+    gap: 56rem;
+    background: #141414;
+    border-bottom: 1rem solid #2E2E2E;
+    flex: none;
+    align-self: stretch;
+    transition: color 0.25s;
+}
+
+.contacts__group1,.contacts__group2{
+    @include position(flex,column, none, flex-start);
+    @include size(112rem,427.5rem);
+    gap: 16rem;
+
+}
+
+.contacts__mail-and-time{
+    @include position(flex,column, end, flex-start);
+    @include size(120rem,313rem);
+    gap: 10rem;
+    width: 313rem;
+    height: 120rem;
+}
+
+.contacts__group1__p{
+    @include size(24rem,auto);
+    @include font(250,16rem,24rem);
+    font-size: 16rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    align-self: stretch;
+}
+
+.contacts__group2__p{
+    @include size(24rem,auto);
+    @include font(250,16rem,24rem);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    align-self: stretch;
+    
+}
+.contacts__group1__social-media, .contacts__group2__social-media{
+    @include position(flex,row, none, center);
+    @include size(24rem,103rem);
+    gap: 20rem;
+}
+.num_ph{
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.25s;
+}
+.contacts__group1__phone-number, .contacts__group2__phone-number{
+    @include position(flex,row, center, center);
+    @include size(40rem,265rem);
+    @include font(600,32rem,40rem);
+    color: #FFFFFF;
+    gap: 8rem;
+    transition: color 0.25s;
+}
+.contacts__group__social-media__telegram{
+    @include position(flex,row, none, center);
+    @include size(24rem,103rem);
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    gap: 7rem;
+    transition: color 0.25s;
+}
+.contacts__group__social-media__whatsapp{
+    @include position(flex,row, none, center);
+    @include size(24rem,113rem);
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    gap: 7rem;
+    transition: color 0.25s;
+}
+.footer__contacts__mail-and-time__mail{
+    @include position(flex,row, none, center);
+    @include size(24rem,134rem);
+    gap: 4rem;
+    color: #ffffff;
+    transition: 0.15s linear;
+    transition: color 0.25s;
+    text-decoration: none;
+}
+.footer__contacts__mail-and-time__time{
+    @include size(24rem,313rem);
+    @include font(300,16rem,24rem);
+    font-feature-settings: 'ss01' on;
+    color: #FFFFFF;
+    transition: color 0.25s;
+}
+.footer__copyrights{
+    @include position(flex,row, space-between, center);
+    @include size(81rem,none);
+    background: #141414;
+    gap: 32rem;
+    order: 1;
+    align-self: stretch;
+    padding: 24rem 320rem;
+}
+.footer__copyrights__p{
+    @include size(16rem,313rem);
+    @include copy(17%)
+}
+.footer__copyrights__p2{
+    @include size(16rem,313rem);
+    @include copy(21%)
+}
+.container_phone_icon:hover{
+    background-color: #3369FF;
+}
+.footer__contacts__mail-and-time__mail:hover{
+    color: #0044FF;
+}
+.num_ph:hover{
+    color: #0044FF;
+}
