@@ -1,0 +1,222 @@
+@use "../base/mixins";
+
+.footer{
+    @include mixins.position(column, none, flex-start);
+    @include mixins.size(672rem,none);
+    display: flex;
+    @include mixins.phone-portrait {
+        height: 680rem;
+    }
+}
+ .contacts{
+    @include mixins.position(none, center, flex-end);
+    @include mixins.size(592rem,none);
+    font-size: 16rem;
+    box-sizing: border-box;
+    padding: 240rem 320rem;
+    gap: 56rem;
+    background: #141414;
+    border-bottom: 1rem solid #2E2E2E;
+    flex: none;
+    align-self: stretch;
+    transition: color 0.25s;
+    &__group1,&__group2{
+        @include mixins.position(column, none, flex-start);
+        @include mixins.size(112rem,427.5rem);
+        gap: 16rem;
+        &-p{
+            @include mixins.size(24rem,auto);
+            @include mixins.font(250,16rem,24rem);
+            font-size: 16rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            align-self: stretch;
+        }
+        
+        &_phone-number{
+            @include mixins.position(row, center, center);
+            @include mixins.size(40rem,265rem);
+            @include mixins.font(600,32rem,40rem);
+            color: #FFFFFF;
+            gap: 8rem;
+            transition: color 0.25s;
+            &-p{
+                text-decoration: none;
+                color: #FFFFFF;
+                transition: color 0.25s;
+                &:hover{
+                    color: #0044FF;
+                }
+            }
+        }
+        &_social-media{
+            @include mixins.position(row, none, center);
+            @include mixins.size(24rem,103rem);
+            gap: 20rem;
+            &-telegram{
+                @include mixins.position(row, none, center);
+                @include mixins.size(24rem,103rem);
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                gap: 7rem;
+                transition: color 0.25s;
+                &:hover{
+                    color: #0044FF;
+                }
+            }
+            &-whatsapp{
+                @include mixins.position(row, none, center);
+                @include mixins.size(24rem,113rem);
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                gap: 7rem;
+                transition: color 0.25s;
+                &:hover{
+                    color: #0044FF;
+                }
+            }
+        }
+        @include mixins.tablet-portrait {
+            width: 324rem;
+        }
+        @include mixins.phone-landscape {
+            width: 324rem;
+        }
+        @include mixins.phone-portrait {
+            width: 324rem;
+        }
+    }
+    &__mail-and-time{
+        @include mixins.position(column, end, flex-start);
+        @include mixins.size(120rem,313rem);
+        gap: 10rem;
+        width: 313rem;
+        height: 120rem;
+        &-mail{
+            @include mixins.position(row, none, center);
+            @include mixins.size(24rem,134rem);
+            gap: 4rem;
+            color: #ffffff;
+            transition: 0.15s linear;
+            transition: color 0.25s;
+            text-decoration: none;
+            &:hover{
+                color: #0044FF;
+            }
+        }
+        &-time{
+            @include mixins.size(24rem,313rem);
+            @include mixins.font(300,16rem,24rem);
+            font-feature-settings: 'ss01' on;
+            color: #FFFFFF;
+            transition: color 0.25s;
+            text-decoration: none;
+            
+        }
+        @include mixins.phone-portrait {
+            height: 56rem;
+        }
+    }
+
+    @include mixins.laptop {
+        padding: 240rem 60rem;
+    }
+    @include mixins.tablet-landscape {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 624rem;
+        padding: 200rem 30rem;
+    }
+    @include mixins.tablet-portrait {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 624rem;
+        padding: 200rem 30rem;
+    }
+    @include mixins.phone-landscape {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 624rem;
+        padding: 200rem 30rem;
+    }
+    @include mixins.phone-portrait {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 680rem;
+        padding: 200rem 16rem;
+    }
+}
+
+
+
+
+
+.footer__copyrights{
+    @include mixins.position(row, space-between, center);
+    @include mixins.size(81rem,none);
+    background: #141414;
+    gap: 32rem;
+    order: 1;
+    align-self: stretch;
+    padding: 24rem 320rem;
+    &-p{
+        @include mixins.size(16rem,313rem);
+        @include mixins.font(300, 12rem, 16rem);
+        color: #FFFFFF;
+        @include mixins.tablet-portrait {
+            width: 324rem;
+        }
+        @include mixins.phone-landscape {
+            width: 324rem;
+        }
+        @include mixins.phone-portrait {
+            width: 324rem;
+        }
+    }
+    &-p2{
+        @include mixins.size(16rem,313rem);
+        @include mixins.font(300, 12rem, 16rem);
+        color: #FFFFFF;
+        @include mixins.tablet-portrait {
+            width: 324rem;
+        }
+        @include mixins.phone-landscape {
+            width: 324rem;
+        }
+        @include mixins.phone-portrait {
+            width: 324rem;
+        }
+    }
+    @include mixins.laptop {
+        padding-left: 60rem;
+        padding-right: 60rem;
+    }
+    @include mixins.tablet-landscape {
+        padding-left:32rem;
+        padding-right: 32rem;
+    }
+    @include mixins.tablet-portrait {
+        padding:24rem 32rem;
+    }
+    @include mixins.phone-landscape {
+        padding:24rem 32rem;
+    }
+    @include mixins.phone-portrait {
+        flex-direction: column;
+
+        padding:24rem 16rem;
+        height: 112rem;
+    }
+}
+
+
+

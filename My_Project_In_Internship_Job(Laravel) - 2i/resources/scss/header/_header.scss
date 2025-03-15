@@ -1,0 +1,166 @@
+@use "../base/mixins";
+
+.header{
+    @include mixins.position(row,space-between,center);
+    padding: 24rem 320rem 0;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    &__logo{
+        width: 64rem;
+        height: 64rem;
+        @include mixins.tablet-landscape {
+            height: 48rem;
+            width: 48rem;
+        }
+        @include mixins.tablet-portrait {
+            height: 48rem;
+            width: 48rem;
+        }
+        @include mixins.phone-landscape {
+            height: 48rem;
+            width: 48rem;
+        }
+        @include mixins.phone-portrait {
+            height: 48rem;
+            width: 48rem;
+        }
+    }
+    
+    @include mixins.laptop {
+        padding: 24rem 60rem;
+    }
+    @include mixins.tablet-landscape {
+        padding: 24rem 30rem;
+    }
+    @include mixins.tablet-portrait {
+        padding: 24rem 30rem ;
+    }
+    @include mixins.phone-landscape {
+        padding: 24rem 30rem;
+    }
+    @include mixins.phone-portrait {
+        padding: 24rem 16rem;
+    }
+}
+.menu{
+    @include mixins.position(row,flex-end,center);
+    padding: 0rem;
+    gap: 40rem;
+    height: 48rem;
+    &__element{
+        text-decoration: none;
+        color: black;
+        transition: color 0.25s;
+        font-size: 16rem;
+        &:hover{
+            color: #0044FF;
+        }
+        @include mixins.tablet-portrait {
+            display: none;
+        }
+        @include mixins.phone-landscape {
+            display: none;
+        }
+        @include mixins.phone-portrait {
+            display: none;
+        }
+    }
+    &__button{
+        font-family: "Geologica";
+        font-size: 16rem;
+        background-color: #FFFFFF;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7rem;
+        @include mixins.wide {
+            display: none;
+        }
+        @include mixins.laptop {
+            display: none;
+        }
+        @include mixins.tablet-landscape {
+            display: none;
+        }
+        @include mixins.tablet-portrait {
+            display: flex;
+            .button__p {
+                display: flex;
+                align-items: center;
+            }
+        }
+        @include mixins.phone-landscape {
+            display: flex;
+            .button__p {
+                display: flex;
+                align-items: center;
+            }
+        }
+        @include mixins.phone-portrait {
+            display: flex;
+            .button__p {
+                display: none;
+            }
+        }
+    }
+    &__phone-icon{
+        font-size: 16rem;
+        @include mixins.position(row,center,center);
+        box-sizing: border-box;
+        padding: 12rem 24rem;
+        gap: 4rem;
+        width: 209rem;
+        height: 48rem;
+        border: 1rem solid #222222;
+        border-radius: 32rem;
+        text-decoration: none;
+        color: #222222;
+        transition: color 0.25s;
+        &:hover{
+            color: #0044FF;
+            border-color: #0044FF;
+        }
+        @include mixins.phone-portrait {
+            display: none;
+        }
+    }
+    &__phone-icon-small {
+        font-size: 16rem;
+        text-decoration: none;
+        color: #222222;
+        @include mixins.wide {
+            display: none;
+        }
+        @include mixins.laptop {
+            display: none;
+        }
+        @include mixins.tablet-landscape {
+            display: none;
+        }
+        @include mixins.tablet-portrait {
+            display: none;
+        }
+        @include mixins.phone-landscape {
+            display: none;
+        }
+        @include mixins.phone-portrait {
+            display: flex;
+        }
+    }
+    @include mixins.tablet-portrait {
+        gap: 20rem;
+    }
+    @include mixins.phone-landscape {
+        gap: 20rem;
+    }
+    @include mixins.phone-portrait {
+        gap: 20rem;
+    }
+}
+
+
+
+

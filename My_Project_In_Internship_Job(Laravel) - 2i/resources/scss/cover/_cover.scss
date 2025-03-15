@@ -1,0 +1,93 @@
+@use "../base/mixins";
+
+.cover{
+    height: 328rem;
+    padding: 140rem 320rem;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 1;
+    @include mixins.laptop {
+        padding: 140rem 60rem;
+    }
+    @include mixins.tablet-landscape {
+        padding: 140rem 30rem;
+    }
+    @include mixins.tablet-portrait {
+        padding: 140rem 30rem;
+    }
+    @include mixins.phone-landscape {
+        padding: 140rem 30rem;
+    }
+    @include mixins.phone-portrait {
+        padding: 140rem 16rem;
+        height: 592rem;
+    }
+}
+.container {
+    @include mixins.position(column, none, flex-start);
+    gap: 32rem;
+    &__h1{
+        width: 900rem;
+        height: 160rem;
+        font-family: 'Geologica';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 64rem;
+        line-height: 80rem;
+        color: #000000;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        @include mixins.tablet-portrait {
+            font-size: 40rem;
+            width: 550rem;
+        }
+        @include mixins.phone-landscape {
+            font-size: 40rem;
+            width: 550rem;
+        }
+        @include mixins.phone-portrait {
+            font-weight: 800;
+            font-size: 40rem;
+            line-height: 58rem;
+            height: 224rem;
+            width: 328rem;
+            word-wrap: break-word
+        }
+    }
+    &__phone-icon{
+        @include mixins.position(row, center, center);
+        @include mixins.size(56rem,225rem);
+        &:hover{
+            background-color: #3369FF;
+        }
+        &:active{
+            background-color: #0044FF;
+        }
+        font-size: 16rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        background: #0044FF;
+        border-radius: 32rem;
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        transition: background-color 0.25s;
+        @include mixins.phone-portrait {
+            width: 328rem;
+        }
+        @include mixins.phone-portrait {
+            height: 224rem;
+        }
+    }
+}
+
+
+

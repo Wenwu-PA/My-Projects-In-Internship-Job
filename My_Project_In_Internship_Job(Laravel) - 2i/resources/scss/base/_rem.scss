@@ -1,0 +1,22 @@
+@use "mixins";
+
+html {
+    @include mixins.wide(){
+        font-size: calc(1vw / 19.2);
+    }
+    @include mixins.laptop {
+        font-size: calc(1vw / 13.66);
+    }
+    @include mixins.tablet-landscape {
+        font-size: calc(1vw / 10.24);
+    }
+    @include mixins.tablet-portrait {
+        font-size: calc(1vw / 7.68);
+    }
+    @include mixins.phone-landscape {
+        font-size: calc(1vw / 8);
+    }
+    @include mixins.phone-portrait {
+        font-size: calc(1vw / 3.6);
+    }
+}

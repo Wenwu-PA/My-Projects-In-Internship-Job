@@ -1,0 +1,66 @@
+@mixin position($flex,$flex_d,$flex_cont,$flex_align){
+    display: $flex;
+    flex-direction: $flex_d;
+    justify-content: $flex_cont;
+    align-items: $flex_align;
+}
+.header{
+    @include position(flex,row,space-between,center);
+    padding: 24rem 320rem 0;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+}
+.header__menu{
+    @include position(flex,row,flex-end,center);
+    padding: 0rem;
+    gap: 40rem;
+    height: 48rem;
+}
+.header__logo{
+    width: 64rem;
+    height: 64rem;
+}
+.menu__element{
+    text-decoration: none;
+    color: black;
+    transition: color 0.25s;
+    font-size: 16rem;
+}
+.menu__button{
+    font-family: "Geologica";
+    font-size: 16rem;
+    background-color: #FFFFFF;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+}
+.menu__phone-icon{
+    font-size: 16rem;
+    @include position(flex,row,center,center);
+    box-sizing: border-box;
+    padding: 12rem 24rem;
+    gap: 4rem;
+    width: 209rem;
+    height: 48rem;
+    border: 1rem solid #222222;
+    border-radius: 32rem;
+    text-decoration: none;
+    color: #222222;
+    transition: color 0.25s;
+}
+.menu__phone-icon-small {
+    font-size: 16rem;
+    text-decoration: none;
+    color: #222222;
+}
+.menu__element:hover{
+    color: #0044FF;
+}
+.menu__phone-icon:hover{
+    color: #0044FF;
+    border-color: #0044FF;
+}
