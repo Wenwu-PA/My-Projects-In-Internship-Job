@@ -1,0 +1,42 @@
+@use "../general/mixin";
+
+.service-info{
+    /* Проектирование, монтаж и обслуживание */
+
+width: 1920px;
+height: 1208px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+.service-info__heading{
+    position: absolute;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    color: #2244AA;
+}
+.service-info__cards{
+
+    position: absolute;
+    width: 1307px;
+    height: 808px;
+    left: 306px;
+    top: 224px;
+
+}
+.service-info__1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    position: absolute;
+}

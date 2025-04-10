@@ -1,0 +1,82 @@
+@use "../general/mixin";
+.heading{
+    @include mixin.font(300,40rem,48rem);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 519rem;
+    height: 96rem;
+    left: 232rem;
+    font-family: 'Rubik';
+    color: #2244AA;
+}
+.priority {
+    @include mixin.flex(row,space-between,none);
+    &__content {
+        width: fit-content;
+    }
+    &__statistic{
+        @include mixin.flex(row,space-between,none);
+        flex-wrap: wrap;
+        gap: 56rem;
+        position: relative;
+        width: 1082rem;
+        height: 544rem;
+        left: 232rem;
+    }
+    &__num{
+        @include mixin.font(700,184rem,184rem);
+        width: 464rem;
+        height: 184rem;
+        font-family: 'rubik';
+        display: flex;
+        align-items: center;
+        background: url("/img/priority/background.jpg");
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-size: cover;
+    }
+    &__text{
+        @include mixin.font(700,32rem,40rem);
+        width: 464rem;
+        height: 40rem;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        color: #44454B;
+
+    }
+    &__1{
+        @include mixin.flex(column,none,flex-start);
+        position: relative;
+        width: 464px;
+        height: 224px;
+    }
+    &__2{
+        @include mixin.flex(column,none,flex-start);
+        position: relative;
+        width: 464rem;
+        height: 224rem;
+    }
+    &__3{
+        @include mixin.flex(column,none,flex-start);
+        position: relative;
+        width: 463rem;
+        height: 264rem;
+    }
+    &__4{
+        @include mixin.flex(column,none,flex-start);
+        position: relative;
+        width: 464rem;
+        height: 224rem;
+    }
+    &__ilustration{
+        position: relative;
+        width: 599rem;
+        height: 641rem;
+
+    }
+}
+
+

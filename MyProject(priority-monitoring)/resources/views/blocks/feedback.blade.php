@@ -1,0 +1,17 @@
+<div class="feedback">
+    <div class="feedback__ilustration">
+        <img src="{{ asset('img/feedback/1.svg') }}" alt="img_hex-1">
+        <img src="{{ asset('img/feedback/2.png') }}" alt="img_hex-2">
+        <img src="{{ asset('img/feedback/3.png') }}" alt="img_hex-3">
+        <img src="{{ asset('img/feedback/4.png') }}" alt="img_hex-4">
+    </div>
+    <form action="" class="form">
+        <h1 class="form__heading">Есть вопросы?</h1>
+        <p class="form__text">Оставьте свой номер телефона или электронный адрес. Мы с вами свяжемся в ближайшее рабочее время.</p>
+        <div class="form__fieldgroup">
+            <span class="form__span">Номер телефона или электронный адрес</span>
+            <input type="tel" name="phone" class="form__input">
+        </div>
+        <x-button name="Отправить данные" icon="fa-solid fa-check button_icon" class="form__button"/>
+    </form>
+</div>

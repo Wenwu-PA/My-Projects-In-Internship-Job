@@ -1,0 +1,45 @@
+@use "../general/mixin";
+
+.button {
+    @include mixin.flex(row,center,center);
+    padding: 16rem 24rem;
+    gap: 4rem;
+    width: 157rem;
+    height: 56rem;
+    background: #2244AA;
+    border-radius: 6rem;
+
+
+    &_span {
+        @include mixin.font(700,16rem, 24rem);
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.02rem;
+        color: #FFFFFF;
+        order: 1;
+    }
+    &_icon {
+        @include mixin.flex(row,center,center);
+        width: 24rem;
+        height: 24rem;
+        color: #FFFFFF;
+    }
+}
+.button-stroke {
+    @include mixin.flex(row,center,center);
+    box-sizing: border-box;
+    padding: 16rem 24rem;
+    gap: 4rem;
+    width: 177rem;
+    height: 56rem;
+    background-color: #FFFFFF;
+    border: 2rem solid #44BBFF;
+    border-radius: 6rem;
+    &_span {
+        @include mixin.font(700,16rem, 24rem);
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.02em;
+        color: #44BBFF;
+    }
+}

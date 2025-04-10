@@ -1,0 +1,71 @@
+.cover {
+    width: 1920rem;
+    height: 768rem;
+    position: relative;
+    &__text-big {
+        position: absolute;
+        top: 152rem;
+        left: 232rem;
+
+        width: 712rem;
+        height: 192rem;
+
+        font-weight: 700;
+        font-size: 56rem;
+        line-height: 64rem;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.02rem;
+        color: #2244AA;
+    }
+    &__text-small {
+        position: absolute;
+        top: 368rem;
+        left: 232rem;
+
+        width: 399rem;
+        height: 32rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20rem;
+        line-height: 32rem;
+        display: flex;
+        align-items: center;
+        color: #44454B;
+    }
+    &__buttons {
+        position: absolute;
+        top: 440rem;
+        left: 232rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0rem;
+        gap: 24rem;
+
+        width: 611rem;
+        height: 56rem;
+
+    }
+    &__consultation {
+        width: 279rem;
+        height: 56rem;
+    }
+    &__tender {
+        width: 308rem;
+        height: 56rem;
+    }
+    &__ilustration {
+        position: absolute;
+        width: 831px;
+        left: 1089px;
+    }
+    &__shadow-of-the-castle {
+        position: absolute;
+        width: 1920rem;
+        top: 364rem;
+        z-index: -100;
+    }
+}

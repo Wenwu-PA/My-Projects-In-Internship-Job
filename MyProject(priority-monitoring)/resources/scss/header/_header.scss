@@ -1,0 +1,44 @@
+@use "../general/mixin";
+
+.header{
+    @include mixin.flex(row,space-between,center);
+    box-sizing: border-box;
+    padding: 16rem 56rem;
+    gap: 217rem;
+    width: 1921rem;
+    height: 88rem;
+    background: #FFFFFF;
+    border-bottom: 1rem solid #D5E3FF;
+
+    &__logo{
+        width: 346rem;
+        height: 56rem;
+    }
+    &__icon{
+        width: 199rem;
+        height: 56rem;
+    }
+    &__menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 32rem;
+    }
+    &__link{
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16rem;
+        line-height: 24rem;
+        text-transform: uppercase;
+        font-feature-settings: 'ss01' on;
+        color: #2F2F2F;
+    }
+    &__buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24rem;
+    }
+}
