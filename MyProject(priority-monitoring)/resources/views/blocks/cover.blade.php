@@ -7,7 +7,7 @@
     </p>
     <div class="cover__buttons">
         <x-button name="Получить консультацию" icon="fa-solid fa-mobile-screen-button button_icon" class="cover__consultation" type="button"/>
-        <x-button name="Предложить участие в тендере" class="button cover__tender" type="button-stroke"/>
+        <x-button name="Предложить участие в тендере" class="cover__tender" type="button-stroke"/>
     </div>
     <img src="{{ asset('img/cover/illustration.png') }}" class="cover__ilustration">
     <img src="{{ asset('img/cover/shadow-of-the-castle.svg') }}" alt="замок" class="cover__shadow-of-the-castle">

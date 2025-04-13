@@ -1,42 +1,108 @@
 @use "../general/mixin";
 
 .service-info{
-    /* Проектирование, монтаж и обслуживание */
+    @include mixin.flex(column,none,none);
+    gap: 48rem;
+    position: relative;
+    width: 1920rem;
+    height: 1208rem;
+    &__heading{
+        position: relative;
+        width: 514rem;
+        height: 96rem;
+        left: 232rem;
+        @include mixin.font(700,40rem,48rem);
+        font-family: 'Rubik';
+        @include mixin.flex(none,none,center);
+        color: #2244AA;
+    }
+    &__cards{
+        @include mixin.flex(column,none,none);
+        position: relative;
+        left: 306rem;
+        width: 1307rem;
+        height: 808rem;
 
-width: 1920px;
-height: 1208px;
+    }
+    &__element{
+        @include mixin.flex(column,center,center);
+        position: relative;
+        &_content {
+            position: absolute;
+            @include mixin.flex(column,center,center);
+            gap: 15rem;
+        }
+        &_icon{
+            position: relative;
+            z-index: 100;
+            width: 56rem;
+            height: 56rem;
+        }
+        &_span{
+            position: relative;
+            z-index: 100;
+            width: 246rem;
+            height: 64rem;
+            @include mixin.font(400,20rem,32rem);
+            text-align: center;
+            color: #2F2F2F;
 
+        }
+        &_background{
+            position: relative;
+            z-index: -100;
+            width: 278rem;
+            height: 312rem;
 
-/* Inside auto layout */
-flex: none;
-order: 2;
-flex-grow: 0;
+        }
+    }
+    &__1{
+        @include mixin.flex(row,none,none);
+        position: absolute;
+        gap: 16rem;
+        width: 1160rem;
+        height: 312rem;
+    }
+    &__2{
+        @include mixin.flex(row,none,none);
+        position: absolute;
+        gap: 16rem;
+        width: 1160rem;
+        height: 312rem;
+        left: 147rem;
+        top:247rem;
 
-}
-.service-info__heading{
-    position: absolute;
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    display: flex;
-    align-items: center;
-    color: #2244AA;
-}
-.service-info__cards{
-
-    position: absolute;
-    width: 1307px;
-    height: 808px;
-    left: 306px;
-    top: 224px;
-
-}
-.service-info__1{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 16px;
-    position: absolute;
+    }
+    &__3{
+        @include mixin.flex(row,none,none);
+        position: absolute;
+        gap: 16rem;
+        width: 1160rem;
+        height: 312rem;
+        top: 496rem;
+    }
+    &__buttons{
+        @include mixin.flex(row,none,none);
+        gap: 24rem;
+        position: relative;
+        width: 611rem;
+        height: 56rem;
+        left: 232rem;
+    }
+    &__consultation {
+        width: 279rem;
+        height: 56rem;
+    }
+    &__tender {
+        width: 308rem;
+        height: 56rem;
+    }
+    &__pattern{
+        position: absolute;
+        z-index: -200;
+        width: 470rem;
+        height: 447rem;
+        left: 1450rem;
+        top: 248rem;
+    }
 }

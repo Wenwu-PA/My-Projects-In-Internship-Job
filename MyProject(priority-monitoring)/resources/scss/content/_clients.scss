@@ -1,1 +1,99 @@
 @use "../general/mixin";
+.clients{
+    height: 1008rem;
+    @include mixin.flex(column,none,none);
+    gap: 48rem;
+    position: relative;
+
+    &__h{
+        @include mixin.font(300,40rem,48rem);
+        @include mixin.flex(none,none,center);
+        gap: 10rem;
+        position: relative;
+        width: 292rem;
+        height: 48rem;
+        left: 232rem;
+        font-family: 'Rubik';
+        color: #2244AA;
+    }
+    &__cards{
+        @include mixin.flex(column,none,flex-start);
+        gap: 32rem;
+        position: relative;
+        width: 1456rem;
+        height: 400rem;
+        left: 232rem;
+    }
+    &__1{
+        @include mixin.flex(row,none,flex-start);
+        gap: 32rem;
+    }
+    &__2{
+        @include mixin.flex(row,none,flex-start);
+        gap: 32rem;
+    }
+    &__element{
+        @include mixin.flex(column,center,center);
+        background-color: white;
+        box-shadow: 0rem 6rem 25rem rgba(145, 151, 183, 0.25);
+        border-radius: 8rem;
+        height: 184rem;
+        width: 216rem;
+        &_img{
+            width: 160rem;
+            height: 64rem;
+        }
+        &_p{
+            width: 184rem;
+            height: 48rem;
+            @include mixin.font(400,16rem,24rem);
+            text-align: center;
+            color: #2F2F2F;
+
+        }
+        &_ul {
+            @include mixin.flex(column,none,none);
+            gap: 10rem;
+        }
+        &_li{
+            &::marker{
+                color: #2244AA;
+            }
+            list-style-type:disc;
+            width: 320rem;
+            @include mixin.font(400,16rem,24rem);
+            color: #44454B;
+        }
+    }
+    &__company{
+        @include mixin.flex(column,none,none);
+        position: relative;
+        left: 232rem;
+        width: 1456rem;
+    }
+    &__list{
+        @include mixin.flex(row,none,flex-start);
+        padding: 0rem;
+        gap: 32rem;
+        width: 1456rem;
+        height: 224rem;
+        position: relative;
+        left: 20rem;
+    }
+    &__paginator{
+        @include mixin.flex(row,none,center);
+        gap: 16rem;
+        position: relative;
+        width: 198rem;
+        height: 40rem;
+    }
+    &__pattern{
+        z-index: -100;
+        position: absolute;
+        width: 353rem;
+        height: 447rem;
+        top: 120rem;
+    }
+
+}
+

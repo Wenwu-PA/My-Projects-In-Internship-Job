@@ -1,1 +1,107 @@
 @use "../general/mixin";
+.advantages {
+    @include mixin.flex(column,none,none);
+    width: 1920rem;
+    height: 1400rem;
+    gap: 48rem;
+    position: relative;
+    &__heading{
+            @include mixin.flex(none,none,center);
+            position: relative;
+            width: 309rem;
+            height: 48rem;
+            left: 232rem;
+            @include mixin.font(700,48rem, 48rem);
+            color: #2244AA;
+            gap: 48rem;
+    }
+    &__cards{
+        align-self: center;
+        @include mixin.flex(column,none,flex-start);
+        gap: 32rem;
+        width: 1456rem;
+        height: 1144rem;
+    }
+    &__row{
+        @include mixin.flex(row,none,flex-start);
+        gap: 32rem;
+        width: 1456rem;
+        height: 360rem;
+    }
+    &__element{
+        @include mixin.flex(column,none,flex-start);
+        padding-left: 32rem;
+        padding-top: 32rem;
+        gap: 24rem;
+        width: 464rem;
+        height: 328rem;
+        background: #FFFFFF;
+        box-shadow: 0rem 6rem 25rem rgba(145, 151, 183, 0.25);
+        border-radius: 8rem;
+
+        order: 0;
+        flex: none;
+        flex-grow: 0;
+
+        &_heading{
+            width: 400rem;
+            height: fit-content;
+            font-family: 'Rubik';
+            @include mixin.font(700,24rem,32rem);
+            @include mixin.flex(row,none,center);
+            letter-spacing: -0.02em;
+            color: #2F2F2F;
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+        &_span{
+            width: 400rem;
+            height: 72rem;
+            font-style: normal;
+            @include mixin.font(400,16rem,24rem);
+            position: relative;
+            font-feature-settings: 'ss01' on;
+
+            color: #44454B;
+
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+
+        }
+        &_text {
+            @include mixin.flex(column,none,flex-start);
+            padding: 0rem;
+            gap: 8rem;
+
+            width: 400rem;
+            height: 112rem;
+
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+
+        }
+    }
+    &__pattern1{
+        position: absolute;
+        z-index: -100;
+        width: 314rem;
+        height: 357rem;
+        left: 1606rem;
+        top: 227rem;
+    }
+    &__pattern2{
+        position: absolute;
+        z-index: -100;
+        width: 365rem;
+        height: 579rem;
+        top: 880rem;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+}
+

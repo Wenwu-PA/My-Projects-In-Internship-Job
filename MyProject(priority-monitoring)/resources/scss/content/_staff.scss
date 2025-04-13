@@ -1,1 +1,77 @@
 @use "../general/mixin";
+.staff{
+    width: 1920rem;
+    height: 960rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32rem;
+    &__heading{
+        position: relative;
+        width: 521rem;
+        height: 96rem;
+        left: 232rem;
+        @include mixin.font(300,40rem,48rem);
+        @include mixin.flex(column,none,none);
+        font-family: 'Rubik';
+        color: #2244AA;
+        &_span{
+            @include mixin.font(700,40rem,48rem);
+            font-family: "Rubik";
+            vertical-align: middle;
+        }
+
+    }
+    &__workers{
+        @include mixin.font(400,20rem,32rem);
+        @include mixin.flex(column,none,flex-start);
+
+        position: relative;
+        width: 1456rem;
+        height: 656rem;
+        left: 233rem;
+    }
+    &__cards{
+        @include mixin.flex(row,none,flex-start);
+        gap: 32rem;
+        width: 1456rem;
+        height: 584rem;
+    }
+    &__card{
+        @include mixin.flex(column,none,none);
+        gap: 10rem;
+    }
+    &__text{
+        @include mixin.flex(column,none,flex-start);
+        gap: 8rem;
+        width: 340rem;
+        height: 120rem;
+    }
+    &__name{
+        width: 340rem;
+        height: 64rem;
+        @include mixin.font(700,24rem,32rem);
+        font-family: 'Rubik';
+        @include mixin.flex(none,none,center);
+        letter-spacing: -0.02em;
+        color: #2F2F2F;
+
+    }
+    &__post{
+        width: 340rem;
+        height: 24rem;
+        @include mixin.font(400,16rem,24rem);
+        @include mixin.flex(none,none,center);
+        display: flex;
+        align-items: center;
+        font-feature-settings: 'ss01' on;
+        color: #2244AA;
+
+    }
+    &__pattern{
+        z-index: -100;
+        position: absolute;
+        top: 246rem;
+    }
+}

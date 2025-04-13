@@ -12,6 +12,8 @@
 }
 .priority {
     @include mixin.flex(row,space-between,none);
+    position: relative;
+
     &__content {
         width: fit-content;
     }
@@ -29,8 +31,7 @@
         width: 464rem;
         height: 184rem;
         font-family: 'rubik';
-        display: flex;
-        align-items: center;
+        @include mixin.flex(none,none,center);
         background: url("/img/priority/background.jpg");
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -41,17 +42,15 @@
         @include mixin.font(700,32rem,40rem);
         width: 464rem;
         height: 40rem;
-        font-style: normal;
-        display: flex;
-        align-items: center;
+        @include mixin.flex(row,none,center);
         color: #44454B;
 
     }
     &__1{
         @include mixin.flex(column,none,flex-start);
         position: relative;
-        width: 464px;
-        height: 224px;
+        width: 464rem;
+        height: 224rem;
     }
     &__2{
         @include mixin.flex(column,none,flex-start);

@@ -1,1 +1,124 @@
 @use "../general/mixin";
+.feedback{
+    width: 1920rem;
+    height: 712rem;
+    position: relative;
+    &__ilustration{
+        position: absolute;
+        width: 706rem;
+        height: 736rem;
+        left: 0rem;
+        top: -40rem;
+    }
+    &__hex-1{
+    position: absolute;
+    width: 194rem;
+    height: 226rem;
+    left: 512rem;
+    top: 94rem;
+    border-radius: 3rem;
+    }
+    &__hex-2{
+    position: absolute;
+    width: 401rem;
+    height: 471rem;
+    left: 0rem;
+    top: -40rem;
+    }
+    &__hex-3{
+    position: absolute;
+    width: 257rem;
+    height: 303rem;
+    left: 428rem;
+    top: 88rem;
+    }
+    &__hex-4{
+    position: absolute;
+    width: 308rem;
+    height: 362rem;
+    left: 259rem;
+    top: 334rem;
+    border-radius: 3rem;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    &__form{
+    position: relative;
+    width: 464rem;
+    height: 384rem;
+    left: 976rem;
+    top: 96rem;
+        &__heading{
+        position: absolute;
+        width: 464rem;
+        height: 64rem;
+        @include mixin.font(700,56rem,64rem);
+        @include mixin.flex(row,none,center);
+        font-family: 'Rubik';
+        letter-spacing: -0.02em;
+        color: #2244AA;
+
+
+        }
+        &__text{
+        position: absolute;
+        width: 378rem;
+        height: 96rem;
+        left: 0rem;
+        top: 80rem;
+        @include mixin.font(400,20rem,32rem);
+        color: #44454B;
+        }
+        &__fieldgroup{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0rem;
+        gap: 8rem;
+        position: absolute;
+        width: 464rem;
+        height: 88rem;
+        left: 0rem;
+        top: 216rem;
+        }
+        &__span{
+        width: 464rem;
+        height: 24rem;
+        @include mixin.font(400,16rem,24rem);
+        font-feature-settings: 'ss01' on;
+        color: #2F2F2F;
+        }
+        &__input{
+
+            @include mixin.flex(none,none,flex-start);
+            box-sizing: border-box;
+            padding: 16rem;
+            width: 464rem;
+            height: 56rem;
+            background: #FFFFFF;
+            border: 1rem solid #CBDDFF;
+            border-radius: 4rem;
+        }
+        &__button{
+            @include mixin.flex(row,center,center);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16rem 24rem;
+            gap: 4rem;
+            position: absolute;
+            width: 464rem;
+            height: 56rem;
+            left: 0rem;
+            top: 328rem;
+            background: #2244AA;
+            border-radius: 6rem;
+        }
+    }
+    &__shadow-of-the-castle{
+        position: absolute;
+        width: 1920rem;
+        top: 364rem;
+        z-index: -1000;
+    }
+}

@@ -18,18 +18,19 @@
         color: #FFFFFF;
         order: 1;
     }
-    &_icon {
+    &__icon {
         @include mixin.flex(row,center,center);
         width: 24rem;
         height: 24rem;
         color: #FFFFFF;
+        &_i {
+            height: 16rem;
+        }
     }
 }
 .button-stroke {
     @include mixin.flex(row,center,center);
     box-sizing: border-box;
-    padding: 16rem 24rem;
-    gap: 4rem;
     width: 177rem;
     height: 56rem;
     background-color: #FFFFFF;

@@ -1,1 +1,56 @@
 @use "../general/mixin";
+.thanks{
+    width: 1920rem;
+    position: relative;
+
+    &__heading{
+        position: relative;
+        width: 373rem;
+        height: 96rem;
+        left: 232rem;
+        // top: 80rem;
+        font-family: "Rubik";
+        @include mixin.font(300,40rem,48rem);
+        vertical-align: middle;
+        color: #2244AA;
+        &__span{
+            font-family: "Rubik";
+            @include mixin.font(700,40rem,48rem);
+            vertical-align: middle;
+
+            color: #2244AA;
+
+        }
+    }
+    &__certificates{
+        @include mixin.flex(column,none,flex-start);
+        position: relative;
+        gap: 32rem;
+        width: 1456rem;
+        height: 376rem;
+        left: 232rem;
+        // top: 224rem;
+        // &__1,&__2,&__3,&__4,&__5,&__6{
+            //     width: 216rem;
+            //     height: 304rem;
+            // }
+        }
+        &__content{
+            @include mixin.flex(row,none,flex-start);
+            gap: 32rem;
+            width: 1456rem;
+            height: 304rem;
+            align-self: stretch;
+            overflow-x: scroll;
+        }
+    &__pattern{
+        z-index: -100;
+        position: absolute;
+        width: 428.57rem;
+        height: 445.73rem;
+        left: 1491.43rem;
+        top: -164rem;
+    }
+
+}
+

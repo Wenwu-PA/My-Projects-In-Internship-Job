@@ -1,16 +1,16 @@
 <div class="projects">
-        <h1 class="projects__h">Наши <span class="projects__span" >проекты</span></h1>
+        <h1 class="projects__heading">Наши<span class="projects__heading__span">проекты</span></h1>
         <p class="projects__p">Проект по наружному освещению в г. Выборг</p>
         <div class="projects__slider">
             <div class="projects__tabs">
-                <button class="projects__element">Смоляной мыс</button>
-                <button class="projects__element">Сквер Победы</button>
-                <button class="projects__element">Парк Кутузова</button>
-                <button class="projects__element">Садовая</button>
+                <button class="projects__element tab_1">Смоляной мыс</button>
+                <button class="projects__element tab_2">Сквер Победы</button>
+                <button class="projects__element tab_3">Парк Кутузова</button>
+                <button class="projects__element tab_4">Садовая</button>
             </div>
-            <div class="projects__project">
-                <div class="projects__card">
-                    <p class="projects__p">
+            <div class="projects__card">
+                <div class="projects__text">
+                    <span class="projects__span">
                     Работы по наружному освещению (демонтаж и электромонтаж)<br>
                     зоны отдыха на Смоляном мысе. Проходил в границах <br>
                     исторического поселения федерального значения город Выборг <br>
@@ -22,17 +22,14 @@
                     «Выборгского района» Ленинградской области и ООО «Дорстрой <br>
                     47», в также договора субподряда № 43 от 27 мая 2019 г., <br>
                     заключенного между ООО «Дорстрой 47» и ООО «Ампер».
-                    </p>
+                    </span>
                 </div>
                 <div class="projects__photo">
-                    <div class="paginator">
-                        <button class="paginator_left"><</button>
-                        <p class="paginator_number">1/5</p>
-                        <button class="paginator_right">></button>
-                    </div>
-                    <img src="{{ asset('img/projects/slider/1.png') }}" alt="" class="slider__img">
+                    <x-projects.paginator class="projects__paginator" type="paginator" text="5"/>
+                    <img src="{{ asset('img/projects/slider/1.png') }}" alt="" class="projects__img">
+                    <img src="{{ asset('img/projects/slider/2.png') }}" alt="" class="projects__img-dark">
                 </div>
             </div>
         </div>
-        <img src="{{ asset('img/projects/pattern.png') }}" alt="" class="project__pattern">
+        <img src="{{ asset('img/projects/pattern.png') }}" alt="" class="projects__pattern">
     </div>

@@ -22,18 +22,19 @@
 
     </head>
     <body>
-    @include("blocks.header") Сделано
-    @include("blocks.cover")  Почти сделано
-    {{-- @include("blocks.service-info")
-    @include("blocks.advantages") --}}
-    @include("blocks.priority")  Сделано
-    {{-- @include("blocks.projects")
-    @include("blocks.service-info")
-    @include("blocks.clients") --}}
-    {{-- @include("blocks.thanks")
-    @include("blocks.staff") --}}
-    {{-- @include("blocks.vacancy")
-    @include("blocks.feedback") --}}
-    @include("blocks.footer")  Сделано
+    @include("blocks.header")
+    <div class="content">
+        @include("blocks.cover")
+        @include("blocks.service-info")
+        @include("blocks.advantages")
+        @include("blocks.priority")
+        @include("blocks.projects")
+        @include("blocks.clients")
+        @include("blocks.thanks")
+        @include("blocks.staff")
+        @include("blocks.vacancy")
+        @include("blocks.feedback")
+        @include("blocks.footer")
+    </div>
 </body>
 </html>

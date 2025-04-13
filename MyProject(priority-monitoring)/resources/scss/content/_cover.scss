@@ -1,3 +1,5 @@
+@use "../general/mixin";
+
 .cover {
     width: 1920rem;
     height: 768rem;
@@ -6,16 +8,9 @@
         position: absolute;
         top: 152rem;
         left: 232rem;
-
         width: 712rem;
         height: 192rem;
-
-        font-weight: 700;
-        font-size: 56rem;
-        line-height: 64rem;
-
-        display: flex;
-        align-items: center;
+        @include mixin.font(700,56rem,64rem);
         letter-spacing: -0.02rem;
         color: #2244AA;
     }
@@ -23,28 +18,18 @@
         position: absolute;
         top: 368rem;
         left: 232rem;
-
         width: 399rem;
         height: 32rem;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20rem;
-        line-height: 32rem;
-        display: flex;
-        align-items: center;
+        @include mixin.font(400,20rem,32rem);
+        @include mixin.flex(none,none,center);
         color: #44454B;
     }
     &__buttons {
         position: absolute;
         top: 440rem;
         left: 232rem;
-
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0rem;
+        @include mixin.flex(row,none,flex-start);
         gap: 24rem;
-
         width: 611rem;
         height: 56rem;
 
@@ -59,8 +44,8 @@
     }
     &__ilustration {
         position: absolute;
-        width: 831px;
-        left: 1089px;
+        width: 831rem;
+        left: 1089rem;
     }
     &__shadow-of-the-castle {
         position: absolute;

@@ -8,3 +8,8 @@
 @forward "staff";
 @forward "thanks";
 @forward "vacancy";
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 80rem;
+}

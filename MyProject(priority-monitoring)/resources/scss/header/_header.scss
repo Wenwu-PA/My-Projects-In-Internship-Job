@@ -6,6 +6,8 @@
     padding: 16rem 56rem;
     gap: 217rem;
     width: 1921rem;
+    // width: fit-content;
+
     height: 88rem;
     background: #FFFFFF;
     border-bottom: 1rem solid #D5E3FF;
@@ -19,6 +21,8 @@
         height: 56rem;
     }
     &__menu{
+        width: 715rem;
+        height: 32rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -40,5 +44,8 @@
         flex-direction: row;
         align-items: flex-start;
         gap: 24rem;
+        position: relative;
+        width: fit-content;
     }
+
 }

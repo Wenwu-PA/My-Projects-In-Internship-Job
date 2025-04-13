@@ -8,8 +8,8 @@
 <button class="button">
 @endisset
     @isset($icon)
-        <div class="button_icon">
-            <i class="{{$icon}}"></i>
+        <div class="button__icon">
+            <i class="button__icon_i {{$icon}}"></i>
         </div>
     @endisset
     @isset($type)
