@@ -1,0 +1,86 @@
+@use "../general/mixin";
+.footer {
+    @include mixin.flex(row,space-between,flex-start);
+    box-sizing: border-box;
+    padding: 24rem 56rem;
+    width: 1920rem;
+    height: 96rem;
+    background: #FFFFFF;
+    border-top: 1rem solid #D5E3FF;
+    flex: none;
+    order: 11;
+    flex-grow: 0;
+    @include mixin.laptop{
+        padding: 0 40rem;
+        padding-top: 24rem;
+
+        width: 1366rem;
+    }
+    @include mixin.tablet{
+        padding: 0 40rem;
+        padding-top: 24rem;
+        width: 768rem;
+    }
+    @include mixin.phone{
+        padding: 0 16rem;
+        padding-top: 24rem;
+        flex-direction: column;
+        width: 360rem;
+        gap: 16rem;
+    }
+}
+.copyright{
+    @include mixin.flex(row,none,center);
+    width: 292rem;
+    height: 24rem;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    &__p{
+        @include mixin.font(400,16rem,24rem);
+        width: 292rem;
+        height: 24rem;
+        font-feature-settings: 'ss01' on;
+        color: #2F2F2F;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+}
+.autograph{
+    @include mixin.flex(row,none,center);
+    padding: 0rem;
+    gap: 8rem;
+    width: 257rem;
+    height: 48rem;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    &__text{
+        @include mixin.font(400,16rem,24rem);
+        width: 201px;
+        height: 48px;
+        color: #2F2F2F;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        &_span{
+            @include mixin.flex(row,none,center);
+            font-size: 16rem;
+            font-feature-settings: 'ss01' on;
+            background: radial-gradient(39.87% 137.17% at 40.34% -37.17%, #61FFFF 0%, rgba(41, 253, 253, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(305.43% 297.03% at 129.47% -33.07%, #694BFF 0%, rgba(76, 164, 254, 0) 100%, rgba(106, 76, 254, 0.15) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(100% 100% at 100% 100%, #0072F8 0%, rgba(32, 136, 254, 0.25) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(75.07% 125% at 0% 100%, #0026E2 0%, rgba(0, 42, 251, 0.25) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #4E65FF;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    &__logo {
+        width: 48rem;
+        height: 48rem;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+}

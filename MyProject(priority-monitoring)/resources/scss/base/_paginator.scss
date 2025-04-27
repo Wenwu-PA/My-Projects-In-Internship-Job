@@ -1,0 +1,44 @@
+@use "../general/mixin";
+.paginator{
+    z-index: 1000;
+    @include mixin.flex(row,center,center);
+    &__left, &__right{
+        @include mixin.flex(none,center,center);
+        padding: 12rem;
+        width: 56rem;
+        height: 40rem;
+        background: #44BBFF;
+        border-radius: 4rem;
+        color:white;
+        font-size: 30rem;
+    }
+    &__number{
+        @include mixin.font(700,16rem,24rem);
+    width: 54rem;
+    height: 29rem;
+    @include mixin.flex(none,center,center);
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    }
+}
+.paginator__stroke{
+    z-index: 1000;
+    @include mixin.flex(row,none,center);
+    &__left, &__right{
+        @include mixin.flex(none,center,center);
+        padding: 12rem;
+        width: 56rem;
+        height: 40rem;
+        border: 1rem solid #44BBFF;
+        font-size: 30rem;
+        color:#44BBFF;
+    }
+    &__number{
+        @include mixin.font(700,16rem,24rem);
+        width: 54rem;
+        height: 29rem;
+        @include mixin.flex(none,center,center);
+        letter-spacing: 0.02em;
+        color: #44BBFF;
+    }
+}
