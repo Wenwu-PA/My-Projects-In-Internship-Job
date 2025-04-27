@@ -25,7 +25,7 @@
     @include("blocks.header")
     <div class="content">
         @include("blocks.cover")
-        {{-- @include("blocks.service-info.service-info")
+        @include("blocks.service-info.service-info")
         @include("blocks.advantages")
         @include("blocks.priority")
         @include("blocks.projects")
@@ -34,7 +34,7 @@
         @include("blocks.staff")
         @include("blocks.vacancy")
         @include("blocks.feedback")
-        @include("blocks.footer") --}}
+        @include("blocks.footer")
     </div>
 </body>
 </html>
