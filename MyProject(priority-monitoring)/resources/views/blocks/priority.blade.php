@@ -23,5 +23,10 @@
             </div>
         </div>
     </div>
-        <img src="{{ asset('img/priority/illustration.png') }}" class="priority__ilustration">
+    <div class="priority__ilustration">
+        <img src="{{ asset('img/priority/hexagon/1.png') }}" class="priority__ilustration_1">
+        <img src="{{ asset('img/priority/hexagon/2.png') }}" class="priority__ilustration_2">
+        <img src="{{ asset('img/priority/hexagon/3.png') }}" class="priority__ilustration_3">
+        <img src="{{ asset('img/priority/hexagon/4.png') }}" class="priority__ilustration_4">
+    </div>
 </div>

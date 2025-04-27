@@ -3,7 +3,6 @@
     @include mixin.flex(row,space-between,flex-start);
     box-sizing: border-box;
     padding: 24rem 56rem;
-    gap: 1294rem;
     width: 1920rem;
     height: 96rem;
     background: #FFFFFF;
@@ -11,6 +10,24 @@
     flex: none;
     order: 11;
     flex-grow: 0;
+    @include mixin.laptop{
+        padding: 0 40rem;
+        padding-top: 24rem;
+
+        width: 1366rem;
+    }
+    @include mixin.tablet{
+        padding: 0 40rem;
+        padding-top: 24rem;
+        width: 768rem;
+    }
+    @include mixin.phone{
+        padding: 0 16rem;
+        padding-top: 24rem;
+        flex-direction: column;
+        width: 360rem;
+        gap: 16rem;
+    }
 }
 .copyright{
     @include mixin.flex(row,none,center);
@@ -35,11 +52,10 @@
     @include mixin.flex(row,none,center);
     padding: 0rem;
     gap: 8rem;
-    margin: 0 auto;
     width: 257rem;
     height: 48rem;
     flex: none;
-    order: 1;
+    order: 0;
     flex-grow: 0;
     &__text{
         @include mixin.font(400,16rem,24rem);
@@ -47,7 +63,7 @@
         height: 48px;
         color: #2F2F2F;
         flex: none;
-        order: 1;
+        order: 0;
         flex-grow: 0;
         &_span{
             @include mixin.flex(row,none,center);
@@ -60,11 +76,11 @@
         }
     }
     &__logo {
-width: 48rem;
-height: 48rem;
-flex: none;
-order: 0;
-flex-grow: 0;
+        width: 48rem;
+        height: 48rem;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
 
     }
 }

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Priority-monitoring</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -25,7 +25,7 @@
     @include("blocks.header")
     <div class="content">
         @include("blocks.cover")
-        @include("blocks.service-info")
+        @include("blocks.service-info.service-info")
         @include("blocks.advantages")
         @include("blocks.priority")
         @include("blocks.projects")

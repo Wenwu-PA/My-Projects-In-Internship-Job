@@ -1,5 +1,5 @@
 <div class="clients">
-        <h1 class="clients__h">Наши <b>клиенты</b></h1>
+        <h1 class="clients__heading">Наши <b>клиенты</b></h1>
         <div class="clients__cards">
             <div class="clients__1">
                 <x-clients.card src="{{ asset('img/clients/cards/1_row/1.png') }}" text="Администрация «Выборгский район»"/>
@@ -8,8 +8,6 @@
                 <x-clients.card src="{{ asset('img/clients/cards/1_row/4.png') }}" text="ООО «Завод Технофлекс»"/>
                 <x-clients.card src="{{ asset('img/clients/cards/1_row/5.png') }}" text="ЗАО «Балтинвестбанк»"/>
                 <x-clients.card src="{{ asset('img/clients/cards/1_row/6.png') }}" text="ПАО «Абсолют Банк»"/>
-            </div>
-            <div class="clients__2">
                 <x-clients.card src="{{ asset('img/clients/cards/2_row/1.png') }}" text="Администрация «Приморское городское поселение»"/>
                 <x-clients.card src="{{ asset('img/clients/cards/2_row/2.png') }}" text="Администрация «Высоцкое городское поселение»"/>
                 <x-clients.card src="{{ asset('img/clients/cards/2_row/3.png') }}" text="ОАО «ВЗСМ»"/>

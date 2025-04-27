@@ -14,8 +14,8 @@
     }
     &__number{
         @include mixin.font(700,16rem,24rem);
-    width: 54px;
-    height: 29px;
+    width: 54rem;
+    height: 29rem;
     @include mixin.flex(none,center,center);
     letter-spacing: 0.02em;
     color: #FFFFFF;
@@ -35,8 +35,8 @@
     }
     &__number{
         @include mixin.font(700,16rem,24rem);
-        width: 54px;
-        height: 29px;
+        width: 54rem;
+        height: 29rem;
         @include mixin.flex(none,center,center);
         letter-spacing: 0.02em;
         color: #44BBFF;

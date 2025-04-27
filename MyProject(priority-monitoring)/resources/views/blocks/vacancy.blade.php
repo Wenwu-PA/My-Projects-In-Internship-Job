@@ -1,8 +1,9 @@
 <div class="vacancy">
     <h1 class="vacancy__heading"><span class="vacancy__heading_span">Вакансии</span></h1>
+    <x-projects.paginator class="vacancy__paginator" type="paginator__stroke" text="2"/>
     <div class="vacancy__cards">
-        <div class="vacancy__card">
-            <div class="vacancy__card_info">
+        <div class="vacancy__card_1">
+            <div class="vacancy__card_1_info">
                 <div class="vacancy__name">
                     <h1 class="vacancy__prof">Инженер ТО СС и У</h1>
                     <p class="vacancy__p">до 35 000 ₽ без НДФЛ</p>
@@ -37,10 +38,10 @@
                     </div>
                 </div>
             </div>
-            <x-button name="связаться с нами" icon="fa-solid fa-mobile-screen-button button_icon" class="vacancy__button" type="button"/>
+            <x-button name="связаться с нами" icon="fa-solid fa-mobile-screen-button" class="vacancy__button" type="button"/>
         </div>
-        <div class="vacancy__card">
-            <div class="vacancy__card_info">
+        <div class="vacancy__card_2">
+            <div class="vacancy__card_2_info">
                 <div class="vacancy__name">
                     <h1 class="vacancy__prof">Ведущий инженер ТО СС и У</h1>
                     <p class="vacancy__p">до 50 000 ₽ без НДФЛ</p>
@@ -76,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <x-button name="связаться с нами" icon="fa-solid fa-mobile-screen-button button_icon" class="vacancy__button" type="button"/>
+            <x-button name="связаться с нами" icon="fa-solid fa-mobile-screen-button" class="vacancy__button" type="button"/>
         </div>
     </div>
     <img src="{{ asset('img/vacancy/pattern.png') }}" alt="" class="vacancy__pattern">

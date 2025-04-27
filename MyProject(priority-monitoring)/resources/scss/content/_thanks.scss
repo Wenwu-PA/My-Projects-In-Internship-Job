@@ -1,14 +1,22 @@
 @use "../general/mixin";
 .thanks{
+    @include mixin.flex(column, none, none);
     width: 1920rem;
     position: relative;
-
+    gap: 48rem;
+    @include mixin.laptop{
+        width: 1366rem;
+    }
+    @include mixin.tablet{
+        width: 768rem;
+    }
+    @include mixin.phone{
+        width: 360rem;
+    }
     &__heading{
         position: relative;
         width: 373rem;
-        height: 96rem;
         left: 232rem;
-        // top: 80rem;
         font-family: "Rubik";
         @include mixin.font(300,40rem,48rem);
         vertical-align: middle;
@@ -17,32 +25,57 @@
             font-family: "Rubik";
             @include mixin.font(700,40rem,48rem);
             vertical-align: middle;
-
             color: #2244AA;
-
+        }
+        @include mixin.laptop{
+            left: 48rem;
+        }
+        @include mixin.tablet{
+            left: 24rem;
+        }
+        @include mixin.phone{
+            left: 16rem;
+            @include mixin.font(700,24rem,32rem);
+            width: 285rem;
         }
     }
     &__certificates{
         @include mixin.flex(column,none,flex-start);
         position: relative;
-        gap: 32rem;
-        width: 1456rem;
-        height: 376rem;
         left: 232rem;
-        // top: 224rem;
-        // &__1,&__2,&__3,&__4,&__5,&__6{
-            //     width: 216rem;
-            //     height: 304rem;
-            // }
-        }
-        &__content{
-            @include mixin.flex(row,none,flex-start);
-            gap: 32rem;
-            width: 1456rem;
+        gap: 32rem;
+        &__card{
             height: 304rem;
-            align-self: stretch;
-            overflow-x: scroll;
+            border-radius: 8rem;
+            flex: none;
         }
+        @include mixin.laptop{
+            width: 1275rem;
+            left: 48rem;
+        }
+        @include mixin.tablet{
+            width: 720rem;
+            left: 24rem;
+        }
+        @include mixin.phone{
+            width: 344rem;
+            left: 16rem;
+        }
+    }
+    &__content{
+        @include mixin.flex(row,none,flex-start);
+        overflow: auto;
+        width: 1456rem;
+        @include mixin.laptop{
+            width: 1275rem;
+        }
+        @include mixin.tablet{
+            width: 720rem;
+        }
+        @include mixin.phone{
+            width: 344rem;
+        }
+    }
     &__pattern{
         z-index: -100;
         position: absolute;
@@ -50,7 +83,28 @@
         height: 445.73rem;
         left: 1491.43rem;
         top: -164rem;
-    }
+        display: none;
+        @include mixin.laptop{
 
+            width: 392rem;
+            height: 408rem;
+            top: -132rem;
+            left: 1036rem;
+        }
+        @include mixin.tablet{
+            width: 331rem;
+            height: 344rem;
+            top: -92rem;
+            left: 488rem;
+
+        }
+        @include mixin.phone{
+            width: 331rem;
+            height: 344rem;
+            top: -148rem;
+            left: 224rem;
+
+        }
+    }
 }
 

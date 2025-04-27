@@ -9,22 +9,61 @@
     left: 232rem;
     font-family: 'Rubik';
     color: #2244AA;
+    @include mixin.laptop{
+        left: 48rem;
+    }
+    @include mixin.tablet{
+        left: 24rem;
+    }
+    @include mixin.phone{
+        @include mixin.font(300,24rem,32rem);
+        width: 328rem;
+        left: 16rem;
+
+    }
 }
 .priority {
     @include mixin.flex(row,space-between,none);
     position: relative;
-
+    @include mixin.tablet{
+        flex-direction: column;
+    }
+    @include mixin.phone{
+        flex-direction: column;
+    }
     &__content {
+        @include mixin.flex(column,none,none);
         width: fit-content;
+        gap: 32rem;
+        @include mixin.tablet{
+            gap: 48rem
+        }
+
     }
     &__statistic{
         @include mixin.flex(row,space-between,none);
         flex-wrap: wrap;
-        gap: 56rem;
         position: relative;
         width: 1082rem;
         height: 544rem;
         left: 232rem;
+        @include mixin.laptop{
+            width: 836rem;
+            height: 424rem;
+            left: 48rem;
+        }
+        @include mixin.tablet{
+            width: 720rem;
+            height: 456rem;
+            left: 24rem;
+        }
+        @include mixin.phone{
+            width: 328rem;
+            height: 744rem;
+            left: 16rem;
+            gap: 24rem;
+
+        }
     }
     &__num{
         @include mixin.font(700,184rem,184rem);
@@ -37,6 +76,19 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         background-size: cover;
+        @include mixin.laptop{
+            width: 402rem;
+            height: 128rem;
+        }
+        @include mixin.tablet{
+            width: 344rem;
+            height: 128rem;
+        }
+        @include mixin.phone{
+            @include mixin.font(700,120rem,128rem);
+            width: 328rem;
+            height: 128rem;
+        }
     }
     &__text{
         @include mixin.font(700,32rem,40rem);
@@ -44,37 +96,157 @@
         height: 40rem;
         @include mixin.flex(row,none,center);
         color: #44454B;
-
+        @include mixin.laptop{
+            width: 402rem;
+            height: 40rem;
+        }
+        @include mixin.tablet{
+            width: 344rem;
+            height: 80rem;
+        }
+        @include mixin.phone{
+            @include mixin.font(700,24rem,32rem);
+            width: 328rem;
+        }
     }
     &__1{
-        @include mixin.flex(column,none,flex-start);
+        @include mixin.flex(column,space-between,flex-start);
         position: relative;
-        width: 464rem;
-        height: 224rem;
+        width: fit-content;
     }
     &__2{
-        @include mixin.flex(column,none,flex-start);
+        @include mixin.flex(column,space-between,flex-start);
         position: relative;
-        width: 464rem;
-        height: 224rem;
+        width: fit-content;
+
     }
     &__3{
-        @include mixin.flex(column,none,flex-start);
+        @include mixin.flex(column,space-between,flex-start);
         position: relative;
-        width: 463rem;
-        height: 264rem;
+        width: fit-content;
+
     }
     &__4{
-        @include mixin.flex(column,none,flex-start);
+        @include mixin.flex(column,space-between,flex-start);
         position: relative;
-        width: 464rem;
-        height: 224rem;
+        width: fit-content;
+
     }
     &__ilustration{
         position: relative;
         width: 599rem;
         height: 641rem;
+        @include mixin.laptop{
+            width: 525rem;
+            height: 560rem;
+        }
+        @include mixin.tablet{
+            width: 737rem;
+            height: 544rem;
+        }
+        @include mixin.phone{
+            width: 337rem;
+            height: 248rem;
+        }
+        &_1 {
+            position: absolute;
+            width: 157rem;
+            height: 183rem;
+            top: 137rem;
+            @include mixin.laptop{
+                width: 137rem;
+                height: 160rem;
+                top: 69rem;
+            }
+            @include mixin.tablet{
+                width: 150rem;
+                height: 175rem;
+                left: 7rem;
+                top: 179rem;
+            }
+            @include mixin.phone{
+                width: 78rem;
+                height: 91rem;
+                left: 7rem;
+                top: 78rem;
+            }
+        }
+        &_2 {
+            position: absolute;
+            width: 326rem;
+            height: 383rem;
+            left: 25rem;
+            top: 104rem;
+            @include mixin.laptop{
+                width: 285rem;
+                height: 335rem;
+                top: 40rem;
+                left: 22rem;
 
+            }
+            @include mixin.tablet{
+                width: 351rem;
+                height: 413rem;
+                top: 131rem;
+                left: 300rem;
+            }
+            @include mixin.phone{
+                width: 159rem;
+                height: 187rem;
+                top: 61rem;
+                left: 143rem;
+            }
+        }
+        &_3 {
+            position: absolute;
+            width: 223rem;
+            height: 263rem;
+            left: 383rem;
+            top: 196rem;
+            @include mixin.laptop{
+                width: 196rem;
+                height: 230rem;
+                top: 120rem;
+                left: 329rem;
+            }
+            @include mixin.tablet{
+                width: 177rem;
+                height: 208rem;
+                top: 0rem;
+                left: 567rem;
+            }
+            @include mixin.phone{
+                width: 81rem;
+                height: 95rem;
+                top: 0rem;
+                left: 264rem;
+            }
+        }
+        &_4 {
+            position: absolute;
+            width: 283rem;
+            height: 332rem;
+            left: 229rem;
+            top: 413rem;
+            @include mixin.laptop{
+                width: 248rem;
+                height: 291rem;
+                top: 309rem;
+                left: 194rem;
+            }
+            @include mixin.tablet{
+                width: 253rem;
+                height: 297rem;
+                top: 162rem;
+                left: 24rem;
+            }
+            @include mixin.phone{
+                width: 116rem;
+                height: 138rem;
+                top: 73rem;
+                left: 16rem;
+            }
+        }
     }
 }
 

@@ -1,16 +1,26 @@
 @use "../general/mixin";
 .staff{
     width: 1920rem;
-    height: 960rem;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 32rem;
+    @include mixin.laptop{
+        width: 1366rem;
+
+    }
+    @include mixin.tablet{
+        width: 768rem;
+
+    }
+    @include mixin.phone{
+        width: 360rem;
+
+    }
     &__heading{
         position: relative;
         width: 521rem;
-        height: 96rem;
         left: 232rem;
         @include mixin.font(300,40rem,48rem);
         @include mixin.flex(column,none,none);
@@ -21,22 +31,58 @@
             font-family: "Rubik";
             vertical-align: middle;
         }
+        @include mixin.laptop{
+            width: 521rem;
+            left: 48rem;
+            font-size: 40rem;
+        }
+        @include mixin.tablet{
+            width: 521rem;
+            left: 24rem;
+            font-size: 40rem;
+        }
+        @include mixin.phone{
+            width: 328rem;
+            left: 16rem;
+            font-size: 24rem;
+        }
+
 
     }
     &__workers{
         @include mixin.font(400,20rem,32rem);
         @include mixin.flex(column,none,flex-start);
-
         position: relative;
         width: 1456rem;
-        height: 656rem;
         left: 233rem;
+        @include mixin.laptop{
+            width: 1270rem;
+            left: 48rem;
+        }
+        @include mixin.tablet{
+            width: 720rem;
+            left: 24rem;
+        }
+        @include mixin.phone{
+            width: 328rem;
+            left: 16rem;
+
+        }
     }
     &__cards{
         @include mixin.flex(row,none,flex-start);
         gap: 32rem;
         width: 1456rem;
-        height: 584rem;
+        overflow: auto;
+        @include mixin.laptop{
+            width: 1270rem;
+        }
+        @include mixin.tablet{
+            width: 720rem;
+        }
+        @include mixin.phone{
+            width: 328rem;
+        }
     }
     &__card{
         @include mixin.flex(column,none,none);
@@ -44,23 +90,38 @@
     }
     &__text{
         @include mixin.flex(column,none,flex-start);
+        @include mixin.font(400,16rem,24rem);
         gap: 8rem;
         width: 340rem;
-        height: 120rem;
+        @include mixin.laptop{
+            width: 293.5rem;
+        }
+        @include mixin.tablet{
+            width: 344rem;
+        }
+        @include mixin.phone{
+            width: 328rem;
+        }
     }
     &__name{
         width: 340rem;
-        height: 64rem;
         @include mixin.font(700,24rem,32rem);
         font-family: 'Rubik';
         @include mixin.flex(none,none,center);
         letter-spacing: -0.02em;
         color: #2F2F2F;
+        @include mixin.laptop{
+            width: 293.5rem;
+        }
+        @include mixin.tablet{
+            width: 344rem;
+        }
+        @include mixin.phone{
+            width: 328rem;
+        }
 
     }
     &__post{
-        width: 340rem;
-        height: 24rem;
         @include mixin.font(400,16rem,24rem);
         @include mixin.flex(none,none,center);
         display: flex;
@@ -73,5 +134,20 @@
         z-index: -100;
         position: absolute;
         top: 246rem;
+        gap: 16rem;
+        height: 580rem;
     }
+    &__photo{
+        width: 340rem;
+        @include mixin.laptop{
+            width: 293.5rem;
+        }
+        @include mixin.tablet{
+            width: 344rem;
+        }
+        @include mixin.phone{
+            width: 328rem;
+        }
+    }
+
 }

@@ -1,0 +1,87 @@
+@use "../../general/mixin";
+
+.service-info__element{
+    @include mixin.flex(column,center,center);
+    position: relative;
+    width: 278rem;
+    height: 312rem;
+    @include mixin.laptop{
+        width: 240rem;
+        height: 272rem;
+    }
+    @include mixin.tablet{
+        width: 229rem;
+        height: 256rem;
+    }
+    @include mixin.phone{
+        width: 216rem;
+        height: 240rem;
+    }
+    &_content {
+        position: absolute;
+        @include mixin.flex(column,center,center);
+        gap: 15rem;
+    }
+    &_icon{
+        position: relative;
+        z-index: 100;
+        width: 56rem;
+        height: 56rem;
+        @include mixin.laptop{
+            width: 48rem;
+            height: 48rem;
+        }
+        @include mixin.tablet{
+            width: 48rem;
+            height: 48rem;
+        }
+        @include mixin.phone{
+            width: 48rem;
+            height: 48rem;
+        }
+    }
+    &_span{
+        position: relative;
+        z-index: 100;
+        width: 246rem;
+        height: 64rem;
+        @include mixin.font(400,20rem,32rem);
+        text-align: center;
+        color: #2F2F2F;
+        @include mixin.laptop{
+            @include mixin.font(400,16rem,24rem);
+            width: 193rem;
+            height: 48rem;
+        }
+        @include mixin.tablet{
+            @include mixin.font(400,16rem,24rem);
+            width: 193rem;
+            height: 24rem;
+        }
+        @include mixin.phone{
+            @include mixin.font(400,16rem,24rem);
+            width: 193rem;
+            height: 48rem;
+        }
+    }
+    &_background{
+        position: relative;
+        z-index: -100;
+        width: 278rem;
+        height: 312rem;
+        @include mixin.laptop{
+            width: 240rem;
+            height: 272rem;
+        }
+        @include mixin.tablet{
+            width: 229rem;
+            height: 256rem;
+
+        }
+        @include mixin.phone{
+            width: 216rem;
+            height: 240rem;
+
+        }
+    }
+}

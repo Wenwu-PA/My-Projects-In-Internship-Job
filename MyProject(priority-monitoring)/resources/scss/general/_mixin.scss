@@ -10,3 +10,23 @@
     font-size: $font-size;
     line-height: $line-height;
 }
+@mixin wide(){
+    @media (min-width:1920px){
+        @content;
+    }
+}
+@mixin laptop(){
+    @media (min-width:1366px) and (max-width:1919px){
+        @content;
+    }
+}
+@mixin tablet(){
+    @media (min-width:768px) and (max-width:1365px){
+        @content;
+    }
+}
+@mixin phone(){
+    @media (max-width:767px){
+        @content;
+    }
+}

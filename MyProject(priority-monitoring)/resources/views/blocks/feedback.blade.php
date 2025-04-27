@@ -12,7 +12,7 @@
             <span class="feedback__form__span">Номер телефона или электронный адрес</span>
             <input type="tel" name="phone" class="feedback__form__input">
         </div>
-        <x-button name="Отправить данные" icon="fa-solid fa-check button_icon" class="feedback__form__button"/>
+        <x-button name="Отправить данные" icon="fa-solid fa-check" class="feedback__form__button"/>
     </form>
     <img src="{{ asset('img/cover/shadow-of-the-castle.svg') }}" alt="замок" class="feedback__shadow-of-the-castle">
 </div>

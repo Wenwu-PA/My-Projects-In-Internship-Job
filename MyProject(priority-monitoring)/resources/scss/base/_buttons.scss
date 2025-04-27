@@ -8,6 +8,7 @@
     height: 56rem;
     background: #2244AA;
     border-radius: 6rem;
+    position: relative;
 
 
     &_span {
@@ -16,16 +17,17 @@
         align-items: center;
         letter-spacing: 0.02rem;
         color: #FFFFFF;
-        order: 1;
     }
     &__icon {
         @include mixin.flex(row,center,center);
+        position: relative;
         width: 24rem;
         height: 24rem;
         color: #FFFFFF;
-        &_i {
-            height: 16rem;
+        &_i{
+            font-size: 16.02rem;
         }
+
     }
 }
 .button-stroke {
@@ -42,5 +44,16 @@
         align-items: center;
         letter-spacing: 0.02em;
         color: #44BBFF;
+    }
+    &__icon {
+        @include mixin.flex(row,center,center);
+        position: relative;
+        width: 24rem;
+        height: 24rem;
+        color: #44BBFF;
+        &_i{
+            font-size: 16.02rem;
+        }
+
     }
 }

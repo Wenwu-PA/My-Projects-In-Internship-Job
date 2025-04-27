@@ -1,5 +1,18 @@
 @use "../general/mixin";
 
 html {
-    font-size: calc(1vw / 19.2);
+    @include mixin.wide() {
+        font-size: calc(1vw / 19.2);
+    }
+    @include mixin.laptop() {
+        font-size: calc(1vw / 13.66);
+    }
+    @include mixin.tablet() {
+        font-size: calc(1vw / 7.68);
+    }
+    @include mixin.phone() {
+        font-size: calc(1vw / 3.6);
+    }
 }
+
+

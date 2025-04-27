@@ -1,0 +1,113 @@
+@use "../../general/mixin";
+@forward "service_cards_element";
+@forward "service_rows";
+
+.service-info{
+    @include mixin.flex(column,none,none);
+    gap: 48rem;
+    position: relative;
+    width: 1920rem;
+
+    @include mixin.laptop{
+        width: 1366rem;
+    }
+    @include mixin.tablet{
+        width: 768rem;
+    }
+    @include mixin.phone{
+        width: 360rem;
+        gap: 32rem;
+    }
+    &__heading{
+        position: relative;
+        width: 514rem;
+        height: 96rem;
+        left: 232rem;
+        @include mixin.font(700,40rem,48rem);
+        font-family: 'Rubik';
+        @include mixin.flex(none,none,center);
+        color: #2244AA;
+        @include mixin.laptop{
+            width: 514rem;
+            height: 96rem;
+            left: 48rem;
+        }
+        @include mixin.tablet{
+            @include mixin.font(700,40rem,48rem);
+            width: 514rem;
+            height: 96rem;
+            left: 24rem;
+
+        }
+        @include mixin.phone{
+            @include mixin.font(700,24rem,32rem);
+            width: 328rem;
+            height: 64rem;
+            left: 16rem;
+        }
+    }
+    &__buttons{
+        @include mixin.flex(row,none,none);
+        gap: 24rem;
+        position: relative;
+        width: 611rem;
+        height: 56rem;
+        left: 232rem;
+        @include mixin.laptop{
+            width: 611rem;
+            height: 56rem;
+            left: 48rem;
+        }
+        @include mixin.tablet{
+            width: 611rem;
+            height: 56rem;
+            left: 24rem;
+
+        }
+        @include mixin.phone{
+            @include mixin.flex(column,none,none);
+            width: 328rem;
+            height: 128rem;
+            left: 16rem;
+        }
+    }
+    &__consultation {
+        width: 308rem;
+        height: 56rem;
+    }
+    &__tender {
+        width: 308rem;
+        height: 56rem;
+    }
+
+    &__pattern{
+        position: absolute;
+        z-index: -200;
+        width: 470rem;
+        height: 447rem;
+        left: 1450rem;
+        top: 248rem;
+        display: none;
+
+        @include mixin.laptop{
+            width: 404rem;
+            height: 384rem;
+            top: 128rem;
+            left: 1045rem;
+        }
+        @include mixin.tablet{
+            width: 354rem;
+            height: 336rem;
+            left: 554rem;
+            top: -56rem;
+        }
+        @include mixin.phone{
+            width: 354rem;
+            height: 336rem;
+            left: 162rem;
+            top: 56rem;
+        }
+    }
+
+
+}

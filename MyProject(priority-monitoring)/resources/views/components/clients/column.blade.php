@@ -1,4 +1,4 @@
-<div class="clients__colomn">
+<div class="clients__column">
     <ul class="clients__element_ul">
         <li class="clients__element_li">{{$text1}}</li>
         <li class="clients__element_li">{{$text2}}</li>

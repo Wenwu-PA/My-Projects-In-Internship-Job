@@ -1,11 +1,13 @@
 @use "../general/mixin";
 .clients{
-    height: 1008rem;
     @include mixin.flex(column,none,none);
     gap: 48rem;
     position: relative;
+    @include mixin.phone{
+        height: 664rem;
+    }
 
-    &__h{
+    &__heading{
         @include mixin.font(300,40rem,48rem);
         @include mixin.flex(none,none,center);
         gap: 10rem;
@@ -15,6 +17,16 @@
         left: 232rem;
         font-family: 'Rubik';
         color: #2244AA;
+        @include mixin.laptop{
+            left:48rem;
+        }
+        @include mixin.tablet{
+            left:24rem;
+        }
+        @include mixin.phone{
+            left:16rem;
+            font-size: 24rem
+        }
     }
     &__cards{
         @include mixin.flex(column,none,flex-start);
@@ -23,14 +35,37 @@
         width: 1456rem;
         height: 400rem;
         left: 232rem;
+        @include mixin.laptop{
+            left:48rem;
+            width: 1306rem;
+            height: 544rem;
+        }
+        @include mixin.tablet{
+            width: 720rem;
+            height: 832rem;
+            left: 24rem;
+        }
+        @include mixin.phone{
+            @include mixin.flex(row,none,none);
+            width: 344rem;
+            height: 180rem;
+            left: 16rem;
+            overflow: auto;
+
+        }
     }
     &__1{
         @include mixin.flex(row,none,flex-start);
         gap: 32rem;
-    }
-    &__2{
-        @include mixin.flex(row,none,flex-start);
-        gap: 32rem;
+        flex-wrap: wrap;
+
+        @include mixin.laptop{
+            width: 1270rem;
+        }
+        @include mixin.phone{
+            flex-wrap: nowrap;
+        }
+
     }
     &__element{
         @include mixin.flex(column,center,center);
@@ -39,6 +74,14 @@
         border-radius: 8rem;
         height: 184rem;
         width: 216rem;
+        @include mixin.laptop{
+            width: 293rem;
+            height: 160rem;
+        }
+        @include mixin.phone{
+            width: 216rem;
+            height: 160rem;
+        }
         &_img{
             width: 160rem;
             height: 64rem;
@@ -49,11 +92,12 @@
             @include mixin.font(400,16rem,24rem);
             text-align: center;
             color: #2F2F2F;
-
         }
         &_ul {
             @include mixin.flex(column,none,none);
             gap: 10rem;
+            padding-left: 16rem;
+            box-sizing: border-box;
         }
         &_li{
             &::marker{
@@ -63,6 +107,15 @@
             width: 320rem;
             @include mixin.font(400,16rem,24rem);
             color: #44454B;
+            @include mixin.laptop{
+                width:293rem;
+            }
+            @include mixin.tablet{
+                width: 344rem;
+            }
+            @include mixin.phone{
+                width: 328rem;
+            }
         }
     }
     &__company{
@@ -70,6 +123,18 @@
         position: relative;
         left: 232rem;
         width: 1456rem;
+        @include mixin.laptop{
+            left:48rem;
+            width: 1306rem;
+        }
+        @include mixin.tablet{
+            width: 720rem;
+            left: 24rem;
+        }
+        @include mixin.phone{
+            width: 328rem;
+            left: 16rem;
+        }
     }
     &__list{
         @include mixin.flex(row,none,flex-start);
@@ -79,6 +144,19 @@
         height: 224rem;
         position: relative;
         left: 20rem;
+        @include mixin.laptop{
+            width: 294rem;
+            gap: 8rem;
+
+        }
+        @include mixin.tablet{
+            width: 720rem;
+            overflow: auto
+        }
+        @include mixin.phone{
+            width: 312rem;
+            overflow: auto
+        }
     }
     &__paginator{
         @include mixin.flex(row,none,center);
@@ -93,6 +171,16 @@
         width: 353rem;
         height: 447rem;
         top: 120rem;
+        @include mixin.laptop{
+            position: absolute;
+            width: 310rem;
+            height: 392rem;
+            top: -69rem;
+
+        }
+        @include mixin.phone{
+            display: none;
+        }
     }
 
 }
